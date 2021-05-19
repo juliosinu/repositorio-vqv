@@ -16,6 +16,3 @@ else if (c>a){
     console.log(c);
   }
 }
-else {
-  console.log ('nuemros iguais');
-}
