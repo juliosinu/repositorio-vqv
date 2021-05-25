@@ -7,4 +7,4 @@ function biggerNumber(numbers){
   }
   return biggerIndex;
 }
-console.log(biggerNumber([2, 3, 16, 7, 10, 1]));
+console.log(biggerNumber([2, 3, 6, 7, 10, 1]));
