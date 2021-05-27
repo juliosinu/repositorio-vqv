@@ -42,7 +42,7 @@
     
     //8
     let terceiroFilhoPai = pai.lastElementChild.previousElementSibling;
-    console.log(terceiroFilhoPai);
+    
     // 2.1
     let irmaoOndeVoceEsta = document.createElement('div');
     irmaoOndeVoceEsta.id = 'irmaoOndeVoceEsta';
@@ -56,7 +56,13 @@
     filhoPrimeiroFilhoDoFilho.id = 'filhoPrimeiroFilhoDoFilho';
     primeiroFilhoDoFilho.appendChild(filhoPrimeiroFilhoDoFilho);
     //2.4
-    
+    for (let index = pai.childNodes - 1; index >= 0; index -= 1){
+      let childAtual = pai.childNodes[index];
+      if (childAtual !== 'elementoOndeVoceEsta'){
+        childAtual.remove();
+      }
+    }
+
 
   </script>
 </body>
