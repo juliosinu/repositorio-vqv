@@ -43,6 +43,20 @@
     //8
     let terceiroFilhoPai = pai.lastElementChild.previousElementSibling;
     console.log(terceiroFilhoPai);
+    // 2.1
+    let irmaoOndeVoceEsta = document.createElement('div');
+    irmaoOndeVoceEsta.id = 'irmaoOndeVoceEsta';
+    pai.appendChild(irmaoOndeVoceEsta);
+    //2.2
+    let filhoOndeVoceEsta = document.createElement('div');
+    filhoOndeVoceEsta.id = 'filhoOndeVoceEsta';
+    ondeVoceEsta.appendChild(filhoOndeVoceEsta);
+    //2.3
+    let filhoPrimeiroFilhoDoFilho = document.createElement('div');
+    filhoPrimeiroFilhoDoFilho.id = 'filhoPrimeiroFilhoDoFilho';
+    primeiroFilhoDoFilho.appendChild(filhoPrimeiroFilhoDoFilho);
+    //2.4
+    
 
   </script>
 </body>
