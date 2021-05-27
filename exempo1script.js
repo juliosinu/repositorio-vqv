@@ -4,7 +4,5 @@ document.getElementById("second-paragraph").innerText = 'Candy shop - 50 Cent';
 
 document.getElementById("subtitle").innerText = 'Musica preferida';
  
-document.getElementsByClassName('.paragraph').style.fontSize = '50px';
- 
-let el = document.getElementById("subtitle");
-el.style.color = 'red';
+const para = document.getElementsByClassName('.paragraphs');
+para[0].style.fontSize = '1.5rem';
