@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" method="GET" enctype="multipart/form-data">
+    <div class="container">
+      <label for="full-name" class="form-label">Nome:</label>
+      <input class="form-control" name='nome' type="text" maxlength="40" id="full-name" required>
+    </div>
+    <div class="container">
+      <label for="e-mail" class="form-label">E-mail:</label>
+      <input class="estilo form-control" name="E-mail" type="text" id="e-mail" maxlength="50" required>
+    </div>
+    <div class="container">
+      <label for="inputPassword5" class="form-label">CPF:</label>
+      <input type="text" id="inputPassword5" name="CPF" class="form-control" aria-describedby="passwordHelpBlock">
+      <div id="passwordHelpBlock" class="form-text">
+      Seu CPF deve conter 11 numeros.
+      </div>
+    </div>
+    <div class="container">
+      <label for="endereco" class="form-label">Endereço:</label>
+      <input type="text" name="endereço" class="estilo form-control" id="endereco" required maxlength="200">
+    </div>
+    <div class="container">
+      <label for="cidade" class="form-label">Cidade:</label>
+      <input type="text" name="cidade" class="estilo form-control" id="cidade" required maxlength="28">
+    </div>
+    <div class="container">
+      <label for="state" class="form-label">Estado:</label>
+      <select name="estado" class="form-select" id="state" required>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+        <option value="EX">Estrangeiro</option>
+      </select>
+    </div>
+    <div class="container form-check">
+      <label for="moradia-casa" class="form-check-label">
+      <input type="radio" class="form-check-input" id="moradia-casa" name="moradia" value="Casa"required>Casa</label>
+      <br>
+      <label for="moradia-apart" class="form-check-label">
+      <input type="radio" class="form-check-input" id="moradia-apart" name="moradia" value="Apartamento"required>Apartamento</label>
+    </div>
+    <div class="mb-3 container">      
+      <label for="curriculo" class="form-label">Resumo do curriculo:
+        <textarea name="curriculo" class="estilo form-control" id="curriculo" cols="30" rows="10" maxlength="1000" required></textarea>
+      </label>
+    </div>
+    <div class="container">
+      <label for="cargo" class="form-label">Cargo:
+        <input type="text" name="cargo" class="estilo form-control" id="cargo" maxlength="40" required>
+      </label>
+    </div>
+    <div class="container">
+      <label for="descricao-cargo" class="form-label">Descriçao do cargo:
+        <input type="text" name="descriçao-do-cargo" class="estilo form-control" id="descricao-cargo" maxlength="500">
+      </label>
+    </div>
+    <div class="container">
+      <label for="data-inicio" class="form-label">Data de inicio:
+        <input type="date" name="data-de-inicio" class="estilo form-control" id="data-inicio">
+      </label>
+    </div>
+    <div class="container"> 
+      <button type="submit" class="btn btn-primary">Enviar Formulario</button>    
+    </div>
+
+  </form>
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
