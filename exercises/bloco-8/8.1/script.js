@@ -1,5 +1,11 @@
-const numbers = [11, 24, 39, 47, 50, 62, 75, 81, 96, 100];
-const firstMultipleOf5 = numbers.find((number) => number % 5 === 0);
+// Ao chamar a função doingThings:
+const doingThings = (wakeUp) => {
+  return wakeUp;
+}
 
-console.log(firstMultipleOf5);
-// 50
+const acorda = () => 'Acordando!!';
+const tomarCafe = () => 'Bora tomar café!!';
+const dormir = () => 'Partiu dormir';
+
+console.log(doingThings(acorda()));
+console.log(doingThings(tomarCafe()));
