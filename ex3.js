@@ -14,7 +14,7 @@ const getCountry = (onSuccess, onError) => {
         hdi: 0.759,
         currency: "Real",
       };
-      return onSuccess(country);
+      onSuccess(country);
     }
     else {
       const errorMessage = "Country could not be found";
