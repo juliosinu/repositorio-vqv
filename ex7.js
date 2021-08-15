@@ -6,21 +6,25 @@ const getMarsTemperature = () => {
 }
 
 const toFahrenheit = (degreeCelsius) => (degreeCelsius * 9/5) + 32;
-const temperatureInFahrenheit = (temperature) => console.log(`It is currently ${toFahrenheit(temperature)}ºF at Mars`);
-const greet = (temperature) => console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
 
-const handleError = (errorReason) => console.log(`Error getting temperature: ${errorReason}`);
+const temperatureInFahrenheit = (temperature) =>
+  console.log(`It is currently ${toFahrenheit(temperature)}ºF at Mars`);
+
+const greet = (temperature) =>
+  console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
+
+const handleError = (errorReason) =>
+  console.log(`Error getting temperature: ${errorReason}`);
 
 const sendMarsTemperature = (onSucess, onError) => {
-  const marsTemperature = getMarsTemperature();
-  const messageSucesfull = Math.random() <= 0.6;
-  setTimeout(() => {
-    if (messageSucesfull) onSucess(marsTemperature);
-    else onError("Robot is busy");
-    
-  }, messageDelay);
+  const percent = Math.floor(Math.random() * 10);
+  if (percent >= 6) {
+    onSucess(getMarsTemperature());
+  } else {
+    const error =  'Robot is busy';
+    onError(error);
+  }
 }
-
 
 // imprime "It is currently 47ºF at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
 sendMarsTemperature(temperatureInFahrenheit, handleError);

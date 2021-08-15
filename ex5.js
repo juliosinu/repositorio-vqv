@@ -5,12 +5,8 @@ const getMarsTemperature = () => {
   return Math.floor(Math.random() * maxTemperature);
 };
 
-const sendMarsTemperature = () => {
-  setTimeout(() => {
-    const temperatureMars = getMarsTemperature();
-    console.log(`Mars temperature is: ${temperatureMars} degree Celsius`);
-  }, messageDelay());
-} 
+sendMarsTemperature = (callback, time) => {
+  setTimeout(() => console.log(callback), time);
+}
 
-sendMarsTemperature(); // imprime "Mars temperature is: 20 degree Celsius", por exemplo
-
+sendMarsTemperature(getMarsTemperature(), messageDelay()); // imprime "Mars temperature is: 20 degree Celsius", por exemplo
