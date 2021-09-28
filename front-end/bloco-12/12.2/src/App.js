@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Email from '../src/Componentes/Email';
 import './App.css';
 
 class App extends Component {
@@ -8,16 +9,18 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
 
     this.state = {
-      estadoFavorito: '',
-      select: '',
+      state: '',
+      age: '',
       email: '',
-      idade: 0,
+      name: '',
+      special: false,
     };
 
   }
 
   handleChange({ target }) {
-    const {name, value} = target;
+    const {name} = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({
       [name]: value,
     })
@@ -26,19 +29,44 @@ class App extends Component {
   render() {
     return(
       <div>
-        <h1>Estado</h1>
+        <h1>Formulario</h1>
         <form className="form">
-          <label>
-            <select name="select" value={ this.state.select} onChange={this.handleChange}>
-              <option value="valor1" selected>Valor 1</option>
-              <option value="valor2">Valor 2</option>
+          Idade
+          <label htmlFor="age">
+            <select id="age"name="idade" value={ this.state.age} onChange={this.handleChange}>
+              <option value="menor18" selected>Menor de 18 anos</option>
+              <option value="maior18">Maior de 18 anos</option>
             </select>
           </label>
-          email<input type="text" name="email" value={ this.state.email} onChange={this.handleChange}/>
-          idade<input type="number" name="idade" value={ this.state.idade} onChange={this.handleChange}/>
-          <label>
-            O q vc gosta no seu estado
-            <textarea name="estadoFavorito" value={ this.state.estadoFavorito} onChange={this.handleChange} />
+          <Email value={ this.state.email } handleChange={ this.handleChange } />
+          <label htmlFor="nome">
+            Nome:
+            <input
+            id="nome"
+            type="text"
+            name="name"
+            value={ this.state.name}
+            onChange={this.handleChange}
+            />
+          </label>
+          <label htmlFor="estado">
+            Estado Favorito:
+            <textarea
+            id="estado"
+            name="state"
+            value={ this.state.state}
+            onChange={this.handleChange}
+            />
+          </label>
+          <label htmlFor="special">
+          Necessidades Especiais: Sim
+            <input
+              id="special"
+              type="checkbox"
+              name="special"
+              value={ this.state.special}
+              onChange={ this.handleChange }
+            />
           </label>
         </form>
       </div>
